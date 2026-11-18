@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Alert, View } from 'react-native';
-import { api } from '../api';
+import { api } from '../../api';
 import { useAuth } from '../AuthContext';
-import { Btn, Field, common } from '../components';
+import { Btn, Field, common } from '../../components';
 
 export default function AddScientistScreen({ navigation }) {
   const { token } = useAuth();

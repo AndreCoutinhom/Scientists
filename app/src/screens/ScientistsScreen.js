@@ -1,10 +1,10 @@
 import React, { useCallback, useState } from 'react';
 import { ActivityIndicator, Alert, FlatList, StyleSheet, Text, View } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
-import { api } from '../api';
+import { api } from '../../api';
 import { useAuth } from '../AuthContext';
-import { Btn, colors, common } from '../components';
-import { openLink } from '../utils';
+import { Btn, colors, common } from '../../components';
+import { openLink } from '../../utils';
 
 export default function ScientistsScreen({ navigation }) {
   const { token } = useAuth();

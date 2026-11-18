@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useAuth } from '../AuthContext';
-import { Btn, Field, colors, common } from '../components';
-import { openLink } from '../utils';
+import { Btn, Field, colors, common } from '../../components';
+import { openLink } from '../../utils';
 
 export default function MenuScreen({ navigation }) {
   const { user, signOut } = useAuth();

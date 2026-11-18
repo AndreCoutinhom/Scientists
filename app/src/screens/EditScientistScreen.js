@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Alert, Text, View } from 'react-native';
-import { api } from '../api';
+import { api } from '../../api';
 import { useAuth } from '../AuthContext';
-import { Btn, Field, colors, common } from '../components';
+import { Btn, Field, colors, common } from '../../components';
 
 export default function EditScientistScreen({ route, navigation }) {
   const { token } = useAuth();

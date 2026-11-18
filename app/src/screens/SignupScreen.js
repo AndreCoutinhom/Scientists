@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Alert, View } from 'react-native';
-import { api } from '../api';
-import { Btn, Field, common } from '../components';
+import { api } from '../../api';
+import { Btn, Field, common } from '../../components';
 
 export default function SignupScreen({ navigation }) {
   const [name, setName] = useState('');

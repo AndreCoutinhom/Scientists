@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Alert, Text, View } from 'react-native';
 import { useAuth } from '../AuthContext';
-import { Btn, Field, common } from '../components';
+import { Btn, Field, common } from '../../components';
 
 export default function LoginScreen({ navigation }) {
   const { signIn } = useAuth();
