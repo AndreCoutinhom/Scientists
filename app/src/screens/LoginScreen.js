@@ -21,7 +21,7 @@ export default function LoginScreen({ navigation }) {
 
   return (
     <View style={common.center}>
-      <Text style={common.title}>Cientistas</Text>
+      <Text style={common.title}>Cientists</Text>
       <Field placeholder="E-mail" keyboardType="email-address" value={email} onChangeText={setEmail} />
       <Field placeholder="Senha" secureTextEntry value={password} onChangeText={setPassword} />
       <Btn title="Entrar" onPress={handleLogin} loading={loading} />
