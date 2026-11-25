@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useAuth } from '../AuthContext';
 import { Btn, Field, colors, common } from '../../components';
@@ -7,7 +8,7 @@ import { openLink } from '../../utils';
 
 export default function MenuScreen({ navigation }) {
   const { user, signOut } = useAuth();
-  const storageKey = `meuLattes:${user.id}`; // um link por usuário
+  const storageKey = `meuLattes:${user.email}`; // um link por usuário
   const [link, setLink] = useState('');
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState('');
@@ -27,7 +28,7 @@ export default function MenuScreen({ navigation }) {
   const startEditing = () => { setDraft(link); setEditing(true); };
 
   return (
-    <View style={common.screen}>
+    <SafeAreaView style={common.screen}>
       <Text style={styles.hello}>Olá, {user.name}!</Text>
 
       {/* Cartão central: "Seu Lattes" */}
@@ -41,7 +42,7 @@ export default function MenuScreen({ navigation }) {
 
         {editing ? (
           <View style={{ width: '100%', marginTop: 12 }}>
-            <Field placeholder="http://lattes.cnpq.br/..." keyboardType="url" value={draft} onChangeText={setDraft} />
+            <Field placeholder="http://busca-cv-lattes.cnpq.br/curriculo/..." keyboardType="url" value={draft} onChangeText={setDraft} />
             <Btn title="Salvar link" onPress={saveLink} />
           </View>
         ) : (
@@ -54,7 +55,7 @@ export default function MenuScreen({ navigation }) {
       <Btn title="Adicionar cientista" onPress={() => navigation.navigate('AddScientist')} />
       <View style={{ height: 8 }} />
       <Btn title="Sair" color={colors.danger} onPress={signOut} />
-    </View>
+    </SafeAreaView>
   );
 }
 
