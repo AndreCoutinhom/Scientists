@@ -78,5 +78,9 @@ npx expo start
 
 Após escanear o QR Code usando o app **Expo Go**, a aplicação começará a rodar no seu celular.
 
+## Declaração de uso de IA
+
+Eu, **André Coutinho de Macedo Silva**, declaro que o desenvolvimento deste projeto contou com o auxílio da LLM Claude no modelo Sonnet 5.5. A LLM participou na dinamização de construção de scripts de autenticação e estilização da interface.
+Declaro, por meio deste documento, que o uso da IA influenciou para a velocidade em que o projeto foi feito e não comprometeu meu entendimento pleno à respeito do funcionamento do projeto e nem comprometeu minha capacidade de realizar alterações pessoais no sistema.
 
 ---
