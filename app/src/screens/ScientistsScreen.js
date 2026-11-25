@@ -5,6 +5,8 @@ import { api } from '../../api';
 import { useAuth } from '../AuthContext';
 import { Btn, colors, common } from '../../components';
 import { openLink } from '../../utils';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 
 export default function ScientistsScreen({ navigation }) {
   const { token } = useAuth();
@@ -43,6 +45,7 @@ export default function ScientistsScreen({ navigation }) {
   if (loading) return <ActivityIndicator style={{ flex: 1 }} size="large" />;
 
   return (
+<SafeAreaView style={common.screen}>
     <FlatList
       style={{ backgroundColor: colors.bg }}
       contentContainerStyle={{ padding: 16 }}
@@ -61,6 +64,7 @@ export default function ScientistsScreen({ navigation }) {
         </View>
       )}
     />
+    </SafeAreaView>
   );
 }
 
